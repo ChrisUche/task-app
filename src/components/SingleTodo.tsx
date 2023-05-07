@@ -5,6 +5,7 @@ import { MdDone} from 'react-icons/md';
 import './style.css';
 import { Draggable } from 'react-beautiful-dnd';
 
+
 type Props = {
     index: number
     todo: Todo,
@@ -76,9 +77,9 @@ const SingleTodo = ({index, todo, todos, setTodos}: Props) => {
             
 
                 <div>
-                    <span className="icon" onClick={() => {if(!edit && !todo.isDone){setEdit(!edit);}}}><AiFillEdit/></span>
-                    <span className="icon" onClick={() => handleDelete(todo.id)}><AiFillDelete/></span>
-                    <span className="icon" onClick={() => handleDone(todo.id)}><MdDone/></span>
+                    <span className="icon" id='edit1' onClick={() => {if(!edit && !todo.isDone){setEdit(!edit);}}}><AiFillEdit/></span>
+                    <span className="icon" id='delete1' onClick={() => handleDelete(todo.id)}><AiFillDelete/></span>
+                    <span className="icon" id='done1' onClick={() => handleDone(todo.id)}><MdDone/></span>
 
                 </div>
 
